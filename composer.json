@@ -21,19 +21,19 @@
     }
   ],
   "require": {
-    "php": "^5.5|^7.0",
-    "mediamonks/crawler": "~1.0",
-    "symfony/framework-bundle": "^2.8|^3.0|^4.0"
+    "php": "^7.4 || ^8.0",
+    "mediamonks/crawler": "dev-tac",
+    "symfony/framework-bundle": ">= 5.4"
   },
   "require-dev": {
-    "codeclimate/php-test-reporter": "dev-master@dev",
     "matthiasnoback/symfony-dependency-injection-test": "0.*",
-    "phpunit/phpunit": "^4.8",
-    "mockery/mockery": "^0.9.4"
+    "mockery/mockery": "^0.9.4",
+    "phpunit/phpunit": "^5.0",
+    "rector/rector": "^0.13.8"
   },
   "autoload": {
     "psr-4": {
-      "MediaMonks\\CrawlerBundle\\": ""
+      "MediaMonks\\CrawlerBundle\\": "src"
     }
   },
   "autoload-dev": {
@@ -41,6 +41,14 @@
       "": "Tests/Functional/src/"
     }
   },
+  "repositories": {
+    "survos_scraper": {
+      "type": "path",
+      "url": "../../projects/crawler"
+    }
+
+  },
+
   "extra": {
     "branch-alias": {
       "dev-master": "1.0-dev"

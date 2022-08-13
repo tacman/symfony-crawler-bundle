@@ -29,7 +29,7 @@ class CrawlUrlCommandTest extends KernelTestCase
      */
     private $commandTester;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         parent::setUp();
 
@@ -121,7 +121,7 @@ class CrawlUrlCommandTest extends KernelTestCase
 
     public function test_execute_exception_on_error()
     {
-        $this->setExpectedException(RequestException::class);
+        $this->expectException(RequestException::class);
 
         $this->crawler->setClient($this->getDummyClient(true));
 

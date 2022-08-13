@@ -71,7 +71,7 @@ class MediaMonksCrawlerExtension extends Extension implements ExtensionInterface
     /**
      * @return string
      */
-    public function getAlias()
+    public function getAlias(): string
     {
         return 'mediamonks_crawler';
     }

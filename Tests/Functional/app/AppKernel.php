@@ -1,5 +1,8 @@
 <?php
 
+// tests/Service/NewsletterGeneratorTest.php
+namespace App\Tests\Functional\app;
+
 use Doctrine\Common\Annotations\AnnotationRegistry;
 use Symfony\Component\Config\Loader\LoaderInterface;
 use Symfony\Component\HttpKernel\Kernel;
@@ -27,7 +30,7 @@ class AppKernel extends Kernel
     /**
      * {@inheritdoc}
      */
-    public function getCacheDir()
+    public function getCacheDir(): string
     {
         return sprintf('%s/../var/cache/%s', $this->rootDir, $this->environment);
     }
@@ -35,7 +38,7 @@ class AppKernel extends Kernel
     /**
      * {@inheritdoc}
      */
-    public function getLogDir()
+    public function getLogDir(): string
     {
         return sprintf('%s/../var/logs', $this->rootDir);
     }
